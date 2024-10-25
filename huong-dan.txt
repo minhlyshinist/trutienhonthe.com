@@ -1,1 +1,5 @@
-bash github.sh
+1) Đẩy code lên
+bash push.sh
+
+2) kéo file về
+bash pull.sh
