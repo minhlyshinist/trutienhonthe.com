@@ -3,4 +3,4 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/aoc
 git add .
 git commit -m "acac"
-git push orign main
+git push origin main
