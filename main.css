@@ -1303,7 +1303,7 @@ main {
 }
 .gameinfo h3 {
   margin: 15px auto;
-  color: #5f89b8;
+  color: #dddddb;
   font-weight: 900;
 }
 .gameinfo .game {
@@ -1313,11 +1313,12 @@ main {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: .5px;
+  color: #d5b9b9;
 }
 .gameinfo p span {
   display: block;
   margin-top: 15px;
-  color: #5f89b8;
+  color: #dddddb;
   font-weight: 700;
 }
 .gameinfo .customer {
