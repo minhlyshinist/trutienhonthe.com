@@ -143,6 +143,22 @@ $(function () {
     });
   });
 
+  $("#nhantoc").click(function () {
+    $("#nhantocclass").css("display", "block")
+    $("#thiendueclass").css("display", "none")
+    $("#thienmachclass").css("display", "none")
+  })
+  $("#thandue").click(function () {
+    $("#nhantocclass").css("display", "none")
+    $("#thandueclass").css("display", "block")
+    $("#thienmachclass").css("display", "none")
+  })
+  $("#thienmach").click(function () {
+    $("#nhantocclass").css("display", "none")
+    $("#thandueclass").css("display", "none")
+    $("#thienmachclass").css("display", "block")
+  })
+
   // gameinfo
   // $('.gameinfo').load('https://ids.iwplay.com.tw/common/mhxzx/gameinfo.html', function() {
 
