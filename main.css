@@ -1725,7 +1725,7 @@ main {
 
 .gameinfo h3 {
   margin: 15px auto;
-  color: #dddddb;
+  color: #ffffff;
   font-weight: 900;
 }
 
@@ -1737,7 +1737,7 @@ main {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: .5px;
-  color: #ffffff;
+  color: #b5b5b5;
 }
 
 .gameinfo p span {
