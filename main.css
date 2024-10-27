@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: myFont;
-  src: url(./font/#9Slide03_Roboto_Slab_Light.ttf);
+  src: url(./font/Roboto_Slab_Light.ttf);
 }
 
 html, body {
@@ -54,7 +54,6 @@ html, body {
 }
 
 aside, header, nav, section {
-  /*font-family: 'Noto Serif TC', serif, sans-serif;*/
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -814,7 +813,6 @@ main {
   /*margin-top: -20px;*/
   max-width: 350px;
   font-size: 18px;
-  /*font-family: 'Noto Serif TC', serif, sans-serif;*/
   line-height: 32px;
   text-align: center;
   height: 100%;
@@ -1127,9 +1125,6 @@ main {
   font-size: 16px;
 }
 
-.newsdetails-contents {
-  /*font-family: Microsoft JhengHei, Arial, sans-serif;*/
-}
 
 .newsdetails-contents h3 {
   margin: 1.5rem 0;
@@ -1172,7 +1167,6 @@ main {
 .pagination ul {
   display: flex;
   margin: 80px auto 50px;
-  /*font-family: Microsoft JhengHei, Arial, sans-serif;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2061,9 +2055,8 @@ footer .company {
     display: block;
     position: absolute;
     top: 50%;
-    color: ##5c5c5c;
+    color: #5c5c5c;
     font-size: 16px;
-    /*font-family: 'Noto Serif TC', serif, sans-serif;*/
     font-weight: 600;
     letter-spacing: 1px;
     transform: translateY(-50%);
@@ -2851,8 +2844,6 @@ footer .company {
 
 
 
-@charset "utf-8";
-
 html {
   min-width: 1200px;
 }
@@ -2861,7 +2852,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   background-color: #FFF;
 }
 
@@ -2888,7 +2878,6 @@ ol, ul {
 }
 
 a {
-  font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   text-decoration: none;
   outline: none;
 }

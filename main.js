@@ -133,10 +133,12 @@ $(function () {
     var $defaultLi = $('.chara_icon li', $tab).eq(showTab).addClass('active');
     $($defaultLi.find('a').attr('href')).siblings().hide();
     $('.chara_icon li', $tab).click(function() {
-      var $this = $(this),
-      clickTab = $this.find('a').attr('href');
+    
+      var $this = $(this)
       $this.addClass('active').siblings().removeClass('active');
-      $(clickTab).stop(false, true).addClass('on').siblings().removeClass('on');
+      const classId = $this.attr("id")
+      $(".chara_content").removeClass('on')
+      $(`#chara${classId}`).addClass('on')
       return false;
     }).find('a').focus(function() {
       this.blur();
@@ -144,29 +146,32 @@ $(function () {
   });
 
   $("#nhantoc").click(function () {
-    $("#nhantocclass").css("display", "block")
-    $("#thiendueclass").css("display", "none")
-    $("#thienmachclass").css("display", "none")
+    $(".icon_nhantoc").css("display", "")
+    $(".icon_thandue").css("display", "none")
+    $(".icon_thienmach").css("display", "none")
+    $(".icon_class").removeClass('active')
+    $(".icon_nhantoc").first().addClass("active")
+    $(".chara_content").removeClass('on')
+    $(".chara_content_nhantoc").first().addClass('on')
   })
   $("#thandue").click(function () {
-    $("#nhantocclass").css("display", "none")
-    $("#thandueclass").css("display", "block")
-    $("#thienmachclass").css("display", "none")
+    $(".icon_nhantoc").css("display", "none")
+    $(".icon_thandue").css("display", "")
+    $(".icon_thienmach").css("display", "none")
+    $(".icon_class").removeClass('active')
+    $(".icon_thandue").first().addClass("active")
+    $(".chara_content").removeClass('on')
+    $(".chara_content_thandue").first().addClass('on')
   })
   $("#thienmach").click(function () {
-    $("#nhantocclass").css("display", "none")
-    $("#thandueclass").css("display", "none")
-    $("#thienmachclass").css("display", "block")
+    $(".icon_nhantoc").css("display", "none")
+    $(".icon_thandue").css("display", "none")
+    $(".icon_thienmach").css("display", "")
+    $(".icon_class").removeClass('active')
+    $(".icon_thienmach").first().addClass("active")
+    $(".chara_content").removeClass('on')
+    $(".chara_content_thienmach").first().addClass('on')
   })
-
-  // gameinfo
-  // $('.gameinfo').load('https://ids.iwplay.com.tw/common/mhxzx/gameinfo.html', function() {
-
-    // app_store
-    // $('.google_play').attr('href', text.google_play);
-    // $('.app_store').attr('href', text.app_store);
-
-  // });
 
   // features
   $('#video').hide(); 
@@ -179,8 +184,5 @@ $(function () {
     $('#video').fadeIn(); 
   });
 
-  // footer
-  // $('footer').load('https://ids.iwplay.com.tw/includ/footer/15.html');
-  $('footer').load('https://sea.jadedynasty.games/template/footer-en.html');
 
 });
