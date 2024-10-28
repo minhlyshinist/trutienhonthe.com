@@ -111,119 +111,6 @@ section {
 }
 
 
-
-/*---- snslink ----*/
-aside {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  pointer-events: initial;
-  z-index: 5;
-}
-
-aside.hide {
-  pointer-events: none;
-}
-
-aside .inner {
-  border: 1px solid #bcae85;
-  position: relative;
-  display: inline-block;
-  width: 160px;
-  height: 342px;
-  right: -5px;
-  text-align: center;
-  background: #f2f2f2;
-  transition: .5s;
-}
-
-aside.hide .inner {
-  right: -165px;
-}
-
-aside .qrcode {
-  margin-top: 10px;
-}
-
-aside .qrcode span {
-  display: block;
-  margin-bottom: .4rem;
-  color: #686c6e;
-  font-size: 18px;
-  line-height: initial;
-  letter-spacing: 1.5px;
-}
-
-aside .link {
-  position: relative;
-  margin-top: 10px;
-  margin-left: 20px;
-  text-align: left;
-}
-
-aside .link a, aside .link a:hover {
-  display: block;
-  text-decoration: none;
-  transition: .5s;
-}
-
-aside .link a:hover span {
-  color: #5f89b8;
-}
-
-aside .link a img {
-  border-radius: 50%;
-  display: inline-block;
-  margin: 3px auto;
-  width: 32px;
-  background: #838e94;
-  transition: .5s;
-}
-
-aside .link a:hover img {
-  background: #5f89b8;
-}
-
-aside .link a span {
-  margin-left: 12px;
-  color: #686c6e;
-  font-size: 14px;
-  letter-spacing: .5px;
-}
-
-aside .btn {
-  position: relative;
-  display: inline-block;
-  width: 37px;
-  height: 342px;
-  background: url(/snslink_btn_bg.jpg) no-repeat center top;
-  background-size: cover;
-  vertical-align: top;
-  pointer-events: initial;
-  transition: .5s;
-}
-
-aside .btn:hover {
-  filter: brightness(1.1);
-}
-
-aside .btn::before {
-  content: "";
-  position: absolute;
-  display: block;
-  margin-top: 10px;
-  width: 16px;
-  height: 77px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: url(/snslink_btn_hide.png) no-repeat center top;
-}
-
-aside.hide .btn::before {
-  background: url(/snslink_btn_open.png) no-repeat center top;
-}
-
 /*---- nav ----*/
 nav {
   position: fixed;
@@ -282,78 +169,6 @@ nav ul li.active a, nav ul li:hover a {
 
 .open_menu, .snslink {
   display: none;
-}
-
-/*---- langs ----*/
-.langs {
-  position: absolute;
-  top: 0px;
-  right: -180px;
-  width: 160px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: .5px;
-  z-index: 2;
-}
-
-.langs a {
-  display: block;
-  position: relative;
-  padding: 7px 0;
-  width: 100%;
-  color: #fff;
-  font-size: 12px;
-}
-
-.langs a.langs_active {
-  padding: 7px 8px;
-  background: rgba(24, 35, 57, .8);
-}
-
-.langs_active:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 10px;
-  height: 6px;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%)scaleY(-1);
-  background: url(/lang_icon_arrow.png) no-repeat center top;
-}
-
-.langs.open .langs_active:after {
-  transform: translateY(-50%)scaleY(1);
-}
-
-.langs_list {
-  position: absolute;
-  top: 32px;
-  left: 0px;
-  width: 100%;
-  padding: 0 8px;
-  padding-bottom: 5px;
-  list-style: none;
-  background: rgba(24, 35, 57, .8);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.langs.open .langs_list {
-  opacity: 1;
-  pointer-events: initial;
-}
-
-.langs_list dd {
-  border-top: 1px solid rgba(81, 148, 204, .2);
-  margin: 0;
-  text-align: left;
-  display: block;
-  font-size: 14px;
-}
-
-.langs_list a:hover {
-  color: #5194cc;
 }
 
 /*---- header ----*/
@@ -425,261 +240,6 @@ header .container {
   }
 }
 
-.bottom {
-  position: relative;
-  margin: 200px auto 0;
-  z-index: 2;
-}
-
-.bottom_bg {
-  position: relative;
-  margin: 0 auto;
-}
-
-.qrcode, .apk, .install_info {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.qrcode {
-  max-width: 155px;
-}
-
-.inner .down_qrcode {
-  width: 127px;
-  height: 127px;
-}
-
-.download .qrcode {
-  position: absolute;
-  top: 22px;
-  left: 65px;
-  width: 116px;
-  height: 126px;
-  background: url(/down_code.png) no-repeat 0 0;
-}
-
-.download .down_qrcode {
-  position: absolute;
-  bottom: 9px;
-  left: 19px;
-  width: 80px;
-  height: 80px;
-}
-
-.apk {
-  margin-left: 5px;
-  max-width: 406px;
-  position: absolute;
-  top: 18px;
-  left: 183px;
-}
-
-.apk .btn_goo,
-.apk .btn_ios,
-.apk .btn_hw,
-.apk .btn_pc {
-  display: block;
-  width: 210px;
-  height: 60px;
-}
-
-.apk .btn_goo {
-  background: url(/btn_google.png) no-repeat 0 0;
-}
-
-.apk .btn_ios {
-  background: url(/btn_apple.png) no-repeat 0 0;
-}
-
-.apk .btn_hw {
-  background: url(/btn_apk_huawei.png) no-repeat 0 0;
-}
-
-.apk .btn_pc {
-  background: url(/btn_apk_pc.png) no-repeat 0 0;
-}
-
-.m-apk {
-  display: none;
-}
-
-.top_up {
-  position: absolute;
-  top: 5px;
-  right: -130px;
-  width: 122px;
-  height: 126px;
-  background: url(/top_up.png) no-repeat 0 0;
-}
-
-.download {
-  position: absolute;
-  display: block;
-  width: 839px;
-  /*height: 171px;*/
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.downloadMain {
-  width: 839px;
-  height: 171px;
-  background: url(/header_bottom_bg.png) no-repeat 0 0;
-  margin: 0 auto;
-}
-
-.downloadCont {
-  height: 135px;
-  padding: 17px 0 0 77px;
-}
-
-.downloadQrcode {
-  width: 116px;
-  height: 135px;
-  background: url(/down_code_new.png) no-repeat 0 0;
-  float: left;
-  margin-right: 8px;
-}
-
-.downloadQrcode span {
-  display: block;
-  padding-top: 34px;
-}
-
-.downloadQrcode img {
-  display: block;
-  width: 92px;
-  height: 92px;
-  margin: 0 auto;
-}
-
-.downloadButton {
-  float: left;
-  width: 126px;
-  height: 135px;
-  margin-right: 8px;
-}
-
-.downloadButton a {
-  display: block;
-  width: 126px;
-  height: 135px;
-}
-
-.downloadButton a.btn_goo {
-  background: url(/btn_google_new.png) no-repeat 0 0;
-}
-
-.downloadButton a.btn_ios {
-  background: url(/btn_apple_new.png) no-repeat 0 0;
-}
-
-.downloadButton2 {
-  float: left;
-  width: 157px;
-  height: 135px;
-  margin-right: 8px;
-}
-
-.downloadButton2 a {
-  display: block;
-  width: 157px;
-  height: 41px;
-  margin-bottom: 6px;
-}
-
-.downloadButton2 a.btn_hw {
-  background: url(/btn_apk_huawei_new.png) no-repeat 0 0;
-}
-
-.downloadButton2 a.btn_pc {
-  background: url(/btn_apk_pc_new.png) no-repeat 0 0;
-}
-
-.downloadButton2 a.btn_ls {
-  background: url(/btn_apk_razer_new.png) no-repeat 0 0;
-  margin-bottom: 0;
-}
-
-.downloadButton3 {
-  float: left;
-  width: 130px;
-  height: 135px;
-}
-
-.downloadButton3 a {
-  display: block;
-  width: 130px;
-  height: 135px;
-  background: url(/top_up_new.png) no-repeat 0 0;
-}
-
-.downloadMobiel {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 54px;
-  width: 100%;
-}
-
-.downloadMobiel div {
-  width: 344px;
-  height: 60px;
-  margin: 0 auto;
-}
-
-.downloadMobiel a {
-  display: block;
-  width: 169px;
-  height: 53px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.downloadMobiel a.btn_goo {
-  background-image: url(/btn_goo_down_m_new.png);
-  float: left;
-}
-
-.downloadMobiel a.btn_ios {
-  background-image: url(/btn_ios_down_m_new.png);
-  float: right;
-}
-
-.downloadMobiel a.btn_hw {
-  background-image: url(/btn_hw_down_m_new.png);
-  float: left;
-}
-
-.downloadMobiel a.btn_ls {
-  background-image: url(/btn_razer_down_m_new.png);
-  float: right;
-}
-
-
-
-.install_info {
-  border-radius: 5px;
-  margin-left: 5px;
-  padding-top: 20px;
-  width: 30px;
-  height: 125px;
-  color: #fff;
-  font-weight: 400;
-  line-height: 20px;
-  background: linear-gradient(0deg, #af8c41, #d6b368);
-  transition: .5s;
-}
-
-.install_info:hover {
-  color: #fff;
-  text-decoration: none;
-  filter: brightness(1.1);
-}
 
 /*---- main ----*/
 main {
@@ -937,7 +497,7 @@ main {
   position: absolute;
   display: inline-block;
   margin-top: -5px;
-  left: 24%;
+  left: 2%;
   top: 50%;
   color: #fff;
   transform: translateY(-50%);
@@ -1244,12 +804,12 @@ main {
 }
 
 #chara03 .video_bg {
-  background: url(/images/class/char_backgrounds/qvt.jpg) no-repeat center center;
+  background: url(/images/class/char_backgrounds/tat.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #chara04 .video_bg {
-  background: url(/images/class/char_backgrounds/tat.jpg) no-repeat center center;
+  background: url(/images/class/char_backgrounds/qvt.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -1351,37 +911,37 @@ main {
 }
 
 #chara02 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/hhp.png) no-repeat right center;
   background-size: cover;
 }
 
 #chara03 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/tat.png) no-repeat right center;
   background-size: cover;
 }
 
 #chara04 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/qvt.png) no-repeat right center;
   background-size: cover;
 }
 
 #chara05 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/qd.png) no-repeat right center;
   background-size: cover;
 }
 
 #chara06 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/phc.png) no-repeat right center;
   background-size: cover;
 }
 
 #chara07 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/ls.png) no-repeat right center;
   background-size: cover;
 }
 
 #chara08 .chara_img {
-  background: url(/images/class/chars/tvm.png) no-repeat right center;
+  background: url(/images/class/chars/cl.png) no-repeat right center;
   background-size: cover;
 }
 
@@ -1541,12 +1101,12 @@ main {
 }
 
 .chara_icon li:nth-child(3) a {
-  background: url(/images/class/icons/qvt.png) no-repeat center top;
+  background: url(/images/class/icons/tat.png) no-repeat center top;
   background-size: cover;
 }
 
 .chara_icon li:nth-child(4) a {
-  background: url(/images/class/icons/tat.png) no-repeat center top;
+  background: url(/images/class/icons/qvt.png) no-repeat center top;
   background-size: cover;
 }
 
@@ -1561,22 +1121,22 @@ main {
 }
 
 .chara_icon li:nth-child(7) a {
-  background: url(/images/class/icons/cl.png) no-repeat center top;
-  background-size: cover;
-}
-
-.chara_icon li:nth-child(8) a {
   background: url(/images/class/icons/ls.png) no-repeat center top;
   background-size: cover;
 }
 
+.chara_icon li:nth-child(8) a {
+  background: url(/images/class/icons/cl.png) no-repeat center top;
+  background-size: cover;
+}
+
 .chara_icon li:nth-child(9) a {
-  background: url(/images/class/icons/hq.png) no-repeat center top;
+  background: url(/images/class/icons/thaihao.png) no-repeat center top;
   background-size: cover;
 }
 
 .chara_icon li:nth-child(10) a {
-  background: url(/images/class/icons/thaihao.png) no-repeat center top;
+  background: url(/images/class/icons/hq.png) no-repeat center top;
   background-size: cover;
 }
 
@@ -1632,12 +1192,12 @@ main {
 }
 
 .chara_icon li.active:nth-child(3) a {
-  background: url(/images/class/icons/qvt_active.png) no-repeat center top;
+  background: url(/images/class/icons/tat_active.png) no-repeat center top;
   background-size: cover;
 }
 
 .chara_icon li.active:nth-child(4) a {
-  background: url(/images/class/icons/tat_active.png) no-repeat center top;
+  background: url(/images/class/icons/qvt_active.png) no-repeat center top;
   background-size: cover;
 }
 
@@ -1652,22 +1212,22 @@ main {
 }
 
 .chara_icon li.active:nth-child(7) a {
-  background: url(/images/class/icons/cl_active.png) no-repeat center top;
-  background-size: cover;
-}
-
-.chara_icon li.active:nth-child(8) a {
   background: url(/images/class/icons/ls_active.png) no-repeat center top;
   background-size: cover;
 }
 
+.chara_icon li.active:nth-child(8) a {
+  background: url(/images/class/icons/cl_active.png) no-repeat center top;
+  background-size: cover;
+}
+
 .chara_icon li.active:nth-child(9) a {
-  background: url(/images/class/icons/hq_active.png) no-repeat center top;
+  background: url(/images/class/icons/thaihao_active.png) no-repeat center top;
   background-size: cover;
 }
 
 .chara_icon li.active:nth-child(10) a {
-  background: url(/images/class/icons/thaihao_active.png) no-repeat center top;
+  background: url(/images/class/icons/hq_active.png) no-repeat center top;
   background-size: cover;
 }
 
@@ -1924,7 +1484,7 @@ footer .company {
   }
 
   #chara01 .chara_img {
-    background: url(/chara01.png) no-repeat 60% center;
+    background: url(/images/class/chars/tvm_mobile.png) no-repeat 60% center;
     background-size: cover;
   }
 
@@ -2317,47 +1877,97 @@ footer .company {
 
   .menpai {
     height: 1080px;
-    background: url(_m.jpg) no-repeat center top;
+    background: url(/menpai_m.jpg) no-repeat center top;
     background-size: cover;
   }
 
   #chara01 .chara_img {
-    background: url(/chara01_m.png) no-repeat center top;
+    background: url(/images/class/chars/tvm_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara02 .chara_img {
-    background: url(/chara02_m.png) no-repeat center top;
+    background: url(/images/class/chars/hhp_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara03 .chara_img {
-    background: url(/chara03_m.png) no-repeat center top;
+    background: url(/images/class/chars/tat_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara04 .chara_img {
-    background: url(/chara04_m.png) no-repeat center top;
+    background: url(/images/class/chars/qvt_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara05 .chara_img {
-    background: url(/chara05_m.png) no-repeat center top;
+    background: url(/images/class/chars/qd_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara06 .chara_img {
-    background: url(/chara06_m.png) no-repeat center top;
+    background: url(/images/class/chars/phc_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara07 .chara_img {
-    background: url(/chara07_m.png) no-repeat center top;
+    background: url(/images/class/chars/ls_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
   #chara08 .chara_img {
-    background: url(/chara08_m.png) no-repeat center top;
+    background: url(/images/class/chars/cl_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara09 .chara_img {
+    background: url(/images/class/chars/thaihao_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara010 .chara_img {
+    background: url(/images/class/chars/hq_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara011 .chara_img {
+    background: url(/images/class/chars/thienhoa_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara012 .chara_img {
+    background: url(/images/class/chars/thanhoang_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara013 .chara_img {
+    background: url(/images/class/chars/ac_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara014 .chara_img {
+    background: url(/images/class/chars/kc_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara015 .chara_img {
+    background: url(/images/class/chars/tl_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara016 .chara_img {
+    background: url(/images/class/chars/pq_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara017 .chara_img {
+    background: url(/images/class/chars/qv_mobile.png) no-repeat center top;
+    background-size: cover;
+  }
+
+  #chara018 .chara_img {
+    background: url(/images/class/chars/ha_mobile.png) no-repeat center top;
     background-size: cover;
   }
 
