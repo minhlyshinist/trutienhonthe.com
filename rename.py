@@ -4,8 +4,8 @@ import shutil
 
 mp = ["tvm","hhp", "qvt", "tat", "qd", "phc", "cl", "ls", "hq", "thaihao", "thienhoa", "thanhoang", "ac", "kc", "tl", "pq", "qv","ha"]
 
-# for i in mp:
-#     shutil.copyfile("class/char_backgrounds/tvm.jpg", "class/char_backgrounds/{}.jpg".format(i))
+for i in mp:
+    shutil.copyfile("class/char_backgrounds/tvm.jpg", "class/char_backgrounds/{}.jpg".format(i))
 
 
 
