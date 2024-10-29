@@ -75,7 +75,7 @@
       <div class="slogan"><img class="img-fluid" src="/slogan.png"></div>
       <a class="btn_video" href="/tai-game" target="_blank">
         <img class="rotate" src="/btn_video_frame.png">
-        <img src="/taigame-btn.png">
+        <img src="/taigame-btn.png" onmouseover="activeBtn(this)" onmouseout="normalBtn(this)">
       </a>
     </div>
   </header>
@@ -808,6 +808,16 @@
   <div style="display:none;">
     <script src="/js/pwstat.js"></script>
   </div>
+
+  <script>
+    function activeBtn(x) {
+      x.setAttribute("src", "/taigame-btn-active.png");
+  }
+
+  function normalBtn(x) {
+    x.setAttribute("src", "/taigame-btn.png");
+  }
+  </script>
 
 </body>
 
